@@ -6,7 +6,7 @@ import './Footer.scss';
 const Footer = () => (
     <footer>
       <Link to="/" className="footer">
-        <img src={footer} alt="footer" />
+        <img src={footer} alt="Bande noire avec le logo kasa en blanc au milieu" />
       </Link>
     </footer>
   );

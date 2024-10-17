@@ -1,24 +1,47 @@
 $color_1: #000;
 
 header {
-	display: flex;
-	flex-direction: row;
-	align-items: center;
-	padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+
+    @media screen and (max-width: 768px) {
+        padding: 0;
+    }
+
+    .logokasa img {
+        @media screen and (max-width: 768px) {
+            height: 40px;
+        }
+    }
 }
+
 .nav {
-	display: flex;
-	margin-left: auto;
-	flex-direction: row;
-	gap: 40px;
-	align-items: center;
+    display: flex;
+    margin-left: auto;
+    gap: 40px;
+    align-items: center;
+
+    @media screen and (max-width: 768px) {
+        gap: 10px; 
+        margin-left: 0;
+    }
 }
+
 .nav-link {
-	margin-left: 20px;
-	text-decoration: none;
-	color: $color_1;
-	font-weight: 400;
-	&:hover {
-		text-decoration: underline;
-	}
+    margin-left: 20px;
+    text-decoration: none;
+    color: $color_1;
+    font-weight: 400;
+    font-size: 1.2rem;
+
+    &:hover {
+        text-decoration: underline;
+    }
+
+    @media screen and (max-width: 768px) {
+        margin-left: 10px;
+        font-size: 1rem; 
+    }
 }
