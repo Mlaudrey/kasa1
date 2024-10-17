@@ -16,7 +16,7 @@ const app = (
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/about" element={<About />} />
-            <Route path="/Not-found" element={<Notfound />} />
+            <Route path="*" element={<Notfound />} />
           </Routes>
         </Router>
       </main>
