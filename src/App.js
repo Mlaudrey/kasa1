@@ -1,30 +1,28 @@
 import React from 'react';
-import { BrowserRouter,Router, Routes, Route } from 'react-router-dom';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import './App.scss';
-import Header from './Components/Header';
-import Footer from './Components/Footer';
-import Home from './Pages/Home';
-import About from './Pages/About';
-import Notfound from './Pages/Not-found';
+import Header from './Components/Header/Header';
+//import Footer from './Components/Footer';
+//import Home from './Pages/Home';
+// import About from './Pages/About';
+// import Notfound from './Pages/Not-found';
 
-const app = (
-  <BrowserRouter>
-    <div className='main-container'>
-      <Header />
-      <main>
-        <Router>
+function App() {
+  return (
+    <BrowserRouter>
+      <div className='main-container'>
+        <Header />
+        {/* <main>
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/about" element={<About />} />
             <Route path="*" element={<Notfound />} />
           </Routes>
-        </Router>
-      </main>
-      <Footer />
+        </main>
+        <Footer /> */}
+      </div>
+    </BrowserRouter>
+  );
+}
 
-    </div>
-  </BrowserRouter>
-);
-
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(app);
+export default App;
