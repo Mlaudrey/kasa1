@@ -3,7 +3,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import './App.scss';
 import Header from './Components/Header/Header';
 import Footer from './Components/Footer/Footer';
-//import Home from './Pages/Home';
+import Home from './Pages/Home/Home';
 // import About from './Pages/About';
 // import Notfound from './Pages/Not-found';
 
@@ -12,13 +12,13 @@ function App() {
     <BrowserRouter>
       <div className='main-container'>
         <Header />
-        {/* <main>
+        <main>
           <Routes>
             <Route path="/" element={<Home />} />
-            <Route path="/about" element={<About />} />
-            <Route path="*" element={<Notfound />} />
+            {/* <Route path="/about" element={<About />} />
+            <Route path="*" element={<Notfound />} /> */}
           </Routes>
-        </main> */}
+        </main>
         <Footer />
       </div>
     </BrowserRouter>
