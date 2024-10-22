@@ -1,4 +1,11 @@
-.card {
+.container {
+    background-color: #f0f0f0; 
+    padding: 20px; 
+    border-radius: 10px; 
+    margin-top: 25px;
+}
+
+.cards {
     display: flex;
     justify-content: flex-start;
     flex-wrap: wrap;
@@ -8,53 +15,55 @@
         flex-direction: column;
         gap: 10px; 
     }
+}
 
-    .card-link {
-        width: calc(33% - 10px); 
+.cards-link {
+    width: calc(33% - 10px); 
+    aspect-ratio: 1 / 1; 
+    position: relative;  
+    border-radius: 10px; 
+    overflow: hidden; 
+
+    @media screen and (max-width: 768px) {
+        width: 100%; 
         aspect-ratio: 1 / 1; 
-        position: relative;  
+    }
 
-        @media screen and (max-width: 768px) {
-            width: 100%; 
-            aspect-ratio: 1 / 1; 
+    .cards-img {
+        width: 100%;
+        height: 100%;
+        border-radius: 10px; 
+        object-fit: cover;
+        filter: brightness(85%);
+        transition: 0.3s;
+
+        &:hover {
+            filter: none;
         }
+    }
 
-        .card-img {
-            width: 100%;
-            height: 100%;
-            border-radius: 10px;
-            object-fit: cover;
-            filter: brightness(85%);
-            transition: 0.3s;
+    &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(to top, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0) 33%); /* Dégradé ajusté */
+        border-radius: 10px; 
+        z-index: 1; 
+    }
 
-            &:hover {
-                filter: none;
-            }
-        }
-
-        &::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(to top, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0) 33%); /* Dégradé ajusté pour être transparent à partir d'un tiers */
-            border-radius: 10px; 
-            z-index: 1; 
-        }
-
-        .card-title {
-            color: white;
-            font-size: 1.125rem;
-            font-weight: 500;
-            position: absolute;
-            bottom: 0;
-            margin: 10px 15px; 
-            padding: 5px 10px;
-            border-radius: 10px;
-            text-shadow: 0 0 50px black;
-            z-index: 2; 
-        }
+    .cards-title {
+        color: white;
+        font-size: 1.125rem;
+        font-weight: 500;
+        position: absolute;
+        bottom: 0;
+        margin: 10px 15px; 
+        padding: 5px 10px;
+        border-radius: 10px;
+        text-shadow: 0 0 50px black;
+        z-index: 2; 
     }
 }

@@ -7,33 +7,35 @@ import Card from '../../Components/Card/Card';
 
 function Home() {
     const [logements, setLogements] = useState([]);
-  
+
     useEffect(() => {
-      // simule le chargement de données
-      const fetchLogements = async () => {
-        setLogements(data);
-      };
-  
-      fetchLogements();
+        // simule le chargement de données
+        const fetchLogements = async () => {
+            setLogements(data);
+        };
+
+        fetchLogements();
     }, []);
-  
-    // utilisation de map pour générer les cards en utilisant le composant card
+
+    // utilisation de map pour générer les cards en utilisant le composant Card
     const cards = logements.map((logement) => (
-      <Card 
-        key={logement.id}
-        id={logement.id}
-        title={logement.title}
-        image={logement.image}
-      />
+        <Card 
+            key={logement.id}
+            id={logement.id}
+            title={logement.title}
+            pictures={logement.pictures}
+        />
     ));
-  
+
     return (
-      <div>
-        <Banner img={banner} title="Chez vous, partout et ailleurs" />
-        <div className="cards-container">
-          {cards}  
+        <div>
+            <Banner img={banner} title="Chez vous, partout et ailleurs" />
+            <div className="container">
+                <div className="cards">
+                    {cards}  
+                </div>
+            </div>
         </div>
-      </div>
     );
 }
 
