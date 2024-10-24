@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import './Homes.scss';
 import Banner from '../../Components/Banner/Banner';
-import banner from '../../Images/Image Banner.png';
+import BannerImg from '../../Images/Image Banner.png';
 import data from '../../Data/logement.json';
 import Card from '../../Components/Card/Card';
 
@@ -29,7 +29,7 @@ function Home() {
 
     return (
         <div>
-            <Banner img={banner} title="Chez vous, partout et ailleurs" />
+            <Banner img={BannerImg} title="Chez vous, partout et ailleurs" />
             <div className="container">
                 {cards}
             </div>
