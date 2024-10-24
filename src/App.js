@@ -5,7 +5,7 @@ import Header from './Components/Header/Header';
 import Footer from './Components/Footer/Footer';
 import Home from './Pages/Home/Home';
 import FicheLogement from './Pages/Fiche-Logement/Fiche-Logement';
-// import About from './Pages/About';
+import About from './Pages/About/About';
 // import Notfound from './Pages/Not-found';
 
 
@@ -18,8 +18,8 @@ function App() {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/Fiche-Logement/:id" element={<FicheLogement />} />
-            {/* <Route path="/about" element={<About />} />
-            <Route path="*" element={<Notfound />} /> */}
+            <Route path="/about" element={<About />} />
+             {/* <Route path="*" element={<Notfound />} />  */}
           </Routes>
         </main>
         <Footer />

@@ -31,9 +31,7 @@ function Home() {
         <div>
             <Banner img={banner} title="Chez vous, partout et ailleurs" />
             <div className="container">
-                <div className="cards">
-                    {cards}  
-                </div>
+                {cards}
             </div>
         </div>
     );
