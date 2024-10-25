@@ -5,28 +5,26 @@ import arrowDown from '../../Images/arrowDown.png';
 import PropTypes from 'prop-types';
 
 const Collapse = ({ type, title, description = '', equipments = [] }) => {
-    const [isOpen, setIsOpen] = useState(false);  // c'est l'état d'ouverture
-  
-    // clic pour ouvrir ou fermer
-    const toggleCollapse = () => {
-      setIsOpen(!isOpen);
-    };
+  const [isOpen, setIsOpen] = useState(false);  // État d'ouverture
 
-    return (
+  const toggleCollapse = () => {
+    setIsOpen(!isOpen);
+  };
+
+  return (
     <div className={`collapse ${type}`}>
-    <div className="collapse-header" onClick={toggleCollapse}>
-      <h2>{title}</h2>
-      <img 
-        src={isOpen ? arrowUp : arrowDown} 
-        alt="Toggle arrow" 
-        className="collapse-arrow"
-      />
-    </div>
-     {/* Contenu affiché ou caché en fonction de l'état */}
-     <div className={`collapse-content ${isOpen ? 'open' : ''}`}>
-        {/* cela affiche la description  */}
+      <div className="collapse-header" onClick={toggleCollapse}>
+        <h2>{title}</h2>
+        <img 
+          src={isOpen ? arrowDown : arrowUp}  // Flèche bas quand ouvert, haut quand fermé
+          alt="Toggle arrow" 
+          className="collapse-arrow"
+        />
+      </div>
+      
+      {/* Contenu affiché en fonction de `isOpen` */}
+      <div className={`collapse-content ${isOpen ? 'open' : ''}`}>
         {description && <p>{description}</p>}
-        {/* cela affiche la liste des équipements */}
         {equipments.length > 0 && (
           <ul>
             {equipments.map((item, index) => (
@@ -40,15 +38,15 @@ const Collapse = ({ type, title, description = '', equipments = [] }) => {
 };
 
 Collapse.propTypes = {
-    type: PropTypes.string.isRequired,    
-    title: PropTypes.string.isRequired,      
-    description: PropTypes.string,          
-    equipments: PropTypes.arrayOf(PropTypes.string) // un tableau de chaînes de caractères
-  };
+  type: PropTypes.string.isRequired,    
+  title: PropTypes.string.isRequired,      
+  description: PropTypes.string,          
+  equipments: PropTypes.arrayOf(PropTypes.string)
+};
 
-  Collapse.defaultProps = {
-    description: '',      
-    equipments: []        
-  };
+Collapse.defaultProps = {
+  description: '',      
+  equipments: []        
+};
 
 export default Collapse;
