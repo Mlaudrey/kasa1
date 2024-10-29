@@ -6,7 +6,7 @@ import Footer from './Components/Footer/Footer';
 import Home from './Pages/Home/Home';
 import FicheLogement from './Pages/Fiche-Logement/Fiche-Logement';
 import About from './Pages/About/About';
-// import Notfound from './Pages/Not-found';
+import NotFound from './Pages/NotFound/NotFound';
 
 
 function App() {
@@ -19,7 +19,7 @@ function App() {
             <Route path="/" element={<Home />} />
             <Route path="/Fiche-Logement/:id" element={<FicheLogement />} />
             <Route path="/about" element={<About />} />
-             {/* <Route path="*" element={<Notfound />} />  */}
+            <Route path="*" element={<NotFound />} /> 
           </Routes>
         </main>
         <Footer />
