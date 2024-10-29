@@ -1,5 +1,5 @@
-import React, { useEffect, useState } from 'react';
-import { useParams } from 'react-router-dom';
+import React, { useEffect, useState } from 'react'; 
+import { useParams, useNavigate } from 'react-router-dom';
 import './Fiche-Logement.scss';
 import data from '../../Data/logement.json'; 
 
@@ -7,7 +7,7 @@ const FicheLogement = () => {
   const { id } = useParams(); // récupère l'ID depuis l'URL
   const [logement, setLogement] = useState(null);
   const [loading, setLoading] = useState(true);
-  const [error, setError] = useState(null);
+  const navigate = useNavigate(); // pour la navigation
 
   useEffect(() => {
     // recherche le logement correspondant dans les données importées
@@ -15,15 +15,14 @@ const FicheLogement = () => {
 
     if (logementData) {
       setLogement(logementData);
-      setLoading(false); // indique que le chargement est terminé
+      setLoading(false); 
     } else {
-      setError("Logement non trouvé.");
-      setLoading(false);
+      
+      navigate('/NotFound');
     }
-  }, [id]);
+  }, [id, navigate]); 
 
   if (loading) return <div>Chargement...</div>;
-  if (error) return <div>{error}</div>;
 
   return (
     <div>
@@ -32,9 +31,7 @@ const FicheLogement = () => {
           <h1>{logement.titre}</h1>
           <p>{logement.description}</p>
         </div>
-      ) : (
-        <p>Aucun logement trouvé.</p>
-      )}
+      ) : null} {/* si le logement n'est pas trouvé, rien n'est affiché ici */}
     </div>
   );
 };
