@@ -46,7 +46,7 @@ const FicheLogement = () => {
 
             <Host name={logement.host.name} picture={logement.host.picture} />
           </div>
-            <Rate name={logement.rating} />
+            <Rate rating={logement.rating} />
 
 
         
