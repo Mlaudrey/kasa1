@@ -3,6 +3,10 @@ import { useParams, useNavigate } from 'react-router-dom';
 import './Fiche-Logement.scss';
 import data from '../../Data/logement.json'; 
 import Slideshow from '../../Components/Slideshow/Slideshow';
+import TitleLogement from '../../Components/TitleLogement/TitleLogement';
+import Host from '../../Components/Host/Host';
+import Rate from '../../Components/Rate/Rate';
+import Tags from '../../Components/Tags/Tags';
 
 const FicheLogement = () => {
   const { id } = useParams(); // récupère l'ID depuis l'URL
