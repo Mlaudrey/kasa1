@@ -1,6 +1,6 @@
 .container {
     display: flex;
-    justify-content:center;
+    justify-content:flex-start;
     flex-wrap: wrap;
     align-items: center;
     background-color: #f0f0f0;
@@ -8,7 +8,7 @@
     border-radius: 10px;
     margin-top: 25px;
     overflow: hidden;
-    gap: 19px;
+    gap: 30px;
 
     
 
