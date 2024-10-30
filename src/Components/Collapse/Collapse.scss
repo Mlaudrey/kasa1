@@ -21,11 +21,11 @@
       .collapse-arrow {
         width: 18px;
         height: 18px;
-        transition: transform 0.3s; // Rotation fluide
-        transform: rotate(0); // Position de départ
+        transition: transform 0.3s; // rotation fluide
+        transform: rotate(0); // position de départ
   
         &.open {
-          transform: rotate(180deg); // Inverse la flèche
+          transform: rotate(180deg); // inverse la flèche
         }
       }
     }
@@ -50,9 +50,9 @@
       }
   
       ul {
-        list-style-type: disc;
+        list-style-type: none;
         padding-left: 20px;
-        margin-top: 10px;
+        margin-top: 5px;
         
         li {
           margin-bottom: 5px;
