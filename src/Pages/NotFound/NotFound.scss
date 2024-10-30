@@ -28,5 +28,23 @@
       
      
     }
-  }
   
+    @media screen and (max-width: 768px) {
+      margin: 20px auto;
+
+      .notfound-title {
+        font-size: 6rem; 
+      }
+
+      .notfound-message {
+        font-size: 1.2rem;
+        margin: 30px 10px; 
+      }
+
+      .notfound-link {
+        margin-top: 30px;
+        font-size: 0.9rem;
+        padding: 8px 16px; 
+      }
+    }
+}
