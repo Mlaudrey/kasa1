@@ -3,10 +3,10 @@ import { useParams, useNavigate } from 'react-router-dom';
 import './Fiche-Logement.scss';
 import data from '../../Data/logement.json'; 
 import Slideshow from '../../Components/Slideshow/Slideshow';
-import TitleLogement from '../../Components/TitleLogement/TitleLogement';
 import Host from '../../Components/Host/Host';
 import Rate from '../../Components/Rate/Rate';
 import Tags from '../../Components/Tags/Tags';
+import Collapse from '../../Components/Collapse/Collapse';
 
 const FicheLogement = () => {
   const { id } = useParams(); // récupère l'ID depuis l'URL
@@ -33,12 +33,23 @@ const FicheLogement = () => {
     <div>
       {logement ? (
         <div>
-          <h1>{logement.titre}</h1>
+          
           {logement.pictures && logement.pictures.length > 0 && (
             <Slideshow pictures={logement.pictures} />
           )}
-          <p>{logement.description}</p>
+           <div className="title-host-container">
+            {/* title et localisation */}
+            <div className="title-location">
+              <h1 className="logement-title">{logement.title}</h1>
+              <p className="logement-location">{logement.location}</p>
+            </div>
 
+            <Host name={logement.host.name} picture={logement.host.picture} />
+          </div>
+            <Rate name={logement.rating} />
+
+
+        
         </div>
       ) : null} {/* si le logement n'est pas trouvé, rien n'est affiché ici */}
     </div>

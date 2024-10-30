@@ -1,0 +1,30 @@
+
+  .title-host-container {
+    display: flex;
+    justify-content: space-between; 
+    align-items: center; 
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+  
+  .title-location {
+    flex: 1; //prend tout l'espace restant à gauche
+  }
+  
+  .logement-title {
+    color: #ff6060;
+    font-weight:500;
+    margin: 0;
+  }
+  
+  .logement-location {
+    color: black;
+    font-size: 18px;
+    margin-top: 5px;
+  }
+  
+  
+    
+   
+  
+  

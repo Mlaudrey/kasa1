@@ -1,0 +1,23 @@
+.host-info {
+    display: flex;
+    align-items: center;
+  
+    .host-name {
+      font-size: 16px;
+      margin-right: 10px;
+      color: #ff6060;
+      font-family: Montserrat, sans-serif;  
+      font-size: 18px;
+      font-weight: 500;
+      line-height: 25.67px;
+      text-align: right;
+    }
+  
+    .host-picture {
+      width: 64px;
+      height: 64px;
+      border-radius: 50%;
+      object-fit: cover;
+    }
+  }
+  
