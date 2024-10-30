@@ -46,10 +46,24 @@ const FicheLogement = () => {
 
             <Host name={logement.host.name} picture={logement.host.picture} />
           </div>
+
+          <div className="tags-rating-container">
+            <Tags tags={logement.tags} />
             <Rate rating={logement.rating} />
+          </div>
 
-
-        
+          <div className="collapse-container">
+            <Collapse 
+              type="description" 
+              title="Description" 
+              description={logement.description} 
+            />
+            <Collapse 
+              type="equipments" 
+              title="Équipements" 
+              equipments={logement.equipments} 
+            />
+          </div>
         </div>
       ) : null} {/* si le logement n'est pas trouvé, rien n'est affiché ici */}
     </div>

@@ -5,7 +5,7 @@ import arrowDown from '../../Images/arrowDown.png';
 import PropTypes from 'prop-types';
 
 const Collapse = ({ type, title, description = '', equipments = [] }) => {
-  const [isOpen, setIsOpen] = useState(false);  // État d'ouverture
+  const [isOpen, setIsOpen] = useState(false);  // état d'ouverture
 
   const toggleCollapse = () => {
     setIsOpen(!isOpen);
@@ -16,7 +16,7 @@ const Collapse = ({ type, title, description = '', equipments = [] }) => {
       <div className="collapse-header" onClick={toggleCollapse}>
         <h2>{title}</h2>
         <img 
-          src={isOpen ? arrowDown : arrowUp}  // Flèche bas quand ouvert, haut quand fermé
+          src={isOpen ? arrowDown : arrowUp}  // flèche bas quand ouvert, haut quand fermé
           alt="Toggle arrow" 
           className="collapse-arrow"
         />

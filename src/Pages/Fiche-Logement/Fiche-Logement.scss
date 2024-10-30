@@ -22,6 +22,24 @@
     font-size: 18px;
     margin-top: 5px;
   }
+
+  .tags-rating-container {
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
+    margin-top: 20px; 
+  }
+
+  .collapse-container {
+    display: flex;          
+    justify-content: space-between; 
+    margin-top: 10px;      
+    gap: 15px;
+    border-radius: 20px;
+    .collapse {
+      flex: 1;                  
+    }
+  }
   
   
     
