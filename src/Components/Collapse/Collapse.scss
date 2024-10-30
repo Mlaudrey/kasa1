@@ -1,63 +1,63 @@
 .collapse {
-    width: 80%;
-    margin: 0 auto 3px; 
-    border-radius: 5px;
-    overflow: hidden;
-  
-    .collapse-header {
-      background-color: #ff6060;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 10px;
-      cursor: pointer;
-  
-      h2 {
-        margin: 0;
-        font-size: 1.2em;
-        color: white;
-      }
-  
-      .collapse-arrow {
-        width: 18px;
-        height: 18px;
-        transition: transform 0.3s; // rotation fluide
-        transform: rotate(0); // position de départ
-  
-        &.open {
-          transform: rotate(180deg); // inverse la flèche
-        }
-      }
+  width: 80%;
+  margin: 0 auto 3px; 
+  overflow: hidden; 
+
+  .collapse-header {
+    background-color: #ff6060; 
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 10px ;
+
+    h2 {
+      margin: 0;
+      font-size: 1.2em;
+      color: white;
     }
-  
-    .collapse-content {
-      background-color: #f0f0f0;
-      padding: 5px;
-      max-height: 0;
-      overflow: hidden;
-      transition: max-height 0.3s ease, opacity 0.3s ease;
-      opacity: 0;
-  
+
+    .collapse-arrow {
+      width: 18px;
+      height: 18px;
+      transition: transform 0.3s; // rotation fluide
+      transform: rotate(0); // position de départ
+
       &.open {
-        max-height: 500px; 
-        opacity: 1;
-      }
-  
-      p {
-        margin: 0;
-        font-size: 1em;
-        line-height: 1.4;
-      }
-  
-      ul {
-        list-style-type: none;
-        padding-left: 20px;
-        margin-top: 5px;
-        
-        li {
-          margin-bottom: 5px;
-        }
+        transform: rotate(180deg); // inverse la flèche
       }
     }
   }
-  
+
+  .collapse-content {
+    background-color: #f0f0f0; // Couleur de fond pour la partie grise
+    padding: 9px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease, opacity 0.3s ease;
+    opacity: 0;
+    
+    &.open {
+      max-height: 500px; 
+      opacity: 1;
+    }
+
+    p {
+      margin-top: 5px;
+      font-size: 1em;
+      padding-left: 15px;
+      line-height: 1.4;
+    }
+
+    ul {
+      list-style-type: none;
+      padding-left: 15px;
+      margin-top: 5px;
+      
+      li {
+        margin-bottom: 5px;
+      }
+    }
+  }
+}
