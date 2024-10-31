@@ -1,12 +1,40 @@
-footer {
+.footer {
+    background-color: #000;
     display: flex;
     justify-content: center; 
     align-items: center;
-    width: 100%; 
-    margin-top: auto; 
-    img {
-        width: 100vw; 
-        height: auto; 
-        object-fit: cover; 
+    width: 100vw; 
+    position:relative;
+    bottom:0;
+    padding: 40px 0;
+
+    .footer-content {
+       text-align:center;
+       width: 100%;
+    }
+
+    .footer-logo {
+        max-width: 150px;
+        height:auto;
+        margin-bottom: 10px;
+    }
+
+    .footer-text {
+        color: white;
+        font-size: 14px;
     }
 }
+
+@media screen and (max-width: 768px) {
+    .footer {
+      padding: 10px 0;
+  
+      .footer-logo {
+        max-width: 120px;  
+      }
+  
+      .footer-text {
+        font-size: 12px;  
+      }
+    }
+  }
