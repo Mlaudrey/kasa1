@@ -37,32 +37,33 @@ const FicheLogement = () => {
           {logement.pictures && logement.pictures.length > 0 && (
             <Slideshow pictures={logement.pictures} />
           )}
-           <div className="title-host-container">
-            {/* title et localisation */}
-            <div className="title-location">
-              <h1 className="logement-title">{logement.title}</h1>
-              <p className="logement-location">{logement.location}</p>
-            </div>
+           <div className="containers">
+              <div className="content">
+                {/* title et localisation */}
+                <div className="title-location">
+                  <h1 className="logement-title">{logement.title}</h1>
+                  <p className="logement-location">{logement.location}</p>
+                  <Tags className="tags-container" tags={logement.tags} />
+                </div>
 
-            <Host name={logement.host.name} picture={logement.host.picture} />
-          </div>
+                <div className="host-rating">
+                <Host name={logement.host.name} picture={logement.host.picture} />
+                <Rate rating={logement.rating} />
+                </div>
+             </div>
 
-          <div className="tags-rating-container">
-            <Tags tags={logement.tags} />
-            <Rate rating={logement.rating} />
-          </div>
-
-          <div className="collapse-container">
-            <Collapse 
-              type="description" 
-              title="Description" 
-              description={logement.description} 
-            />
-            <Collapse 
-              type="equipments" 
-              title="Équipements" 
-              equipments={logement.equipments} 
-            />
+              <div className="collapse-container">
+              <Collapse 
+                type="description" 
+                title="Description" 
+                description={logement.description} 
+              />
+              <Collapse 
+                type="equipments" 
+                title="Équipements" 
+                equipments={logement.equipments} 
+              />
+              </div>
           </div>
         </div>
       ) : null} {/* si le logement n'est pas trouvé, rien n'est affiché ici */}

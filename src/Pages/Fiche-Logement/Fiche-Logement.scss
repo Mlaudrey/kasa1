@@ -1,62 +1,76 @@
 .main-container {
   width: 100%;
-  margin:0 auto;
-  
-
+  margin: 0 auto;
 }
 
-
-.title-host-container {
+.containers {
   display: flex;
-  justify-content: space-between; 
-  align-items: center; 
-  margin: 20px 0; 
+  flex-direction: column;
+  gap: 15px;
+  margin-top: 20px;
 
-  @media screen and (min-width: 768px) {
-    margin: 20px 0; 
-  }
-}
+  .content {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
 
-.title-location {
-  flex: 1; 
-}
+    @media screen and (min-width: 768px) {
+      flex-direction: row;
+      justify-content: space-between;
+    }
 
-.logement-title {
-  color: #ff6060;
-  font-weight: 500;
-  margin: 0;
-}
+    .title-location {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
 
-.logement-location {
-  color: black;
-  font-size: 18px;
-  margin-top: 5px;
-}
+      .tags-container {  
+        display: flex;
+        justify-content: flex-start; 
+        flex-wrap: wrap;
+      }
+    }
 
-.tags-rating-container {
-  display: flex;
-  flex-direction: column; 
-  align-items: flex-start; 
+    .logement-title {
+      color: #ff6060;
+      margin: 0;
+      font-weight: 400;
+    }
 
-  @media screen and (min-width: 768px) {
-    flex-direction: row; 
-    justify-content: space-between; 
-    align-items: center;
+    .logement-location {
+      font-size: 18px;
+      margin-top: 5px;
+      font-weight: 500;
+    }
+
+    .host-rating {
+      display: flex;
+      flex-direction: row-reverse;
+      justify-content: space-between;
+      align-items: center;
+
+      @media screen and (min-width: 768px) {
+        flex-direction: column;
+        align-items: flex-end;
+      }
+    }
   }
 }
 
 .collapse-container {
-  display: flex;          
-  justify-content: space-between; 
-  margin-top: 10px;      
-  gap: 80px;
+  display: flex;
+  flex-direction: column;
   border-radius: 20px;
 
-  @media screen and (max-width: 767px) {
-    gap: 20px; 
+  @media screen and (min-width: 768px) {
+    gap: 50px;  
+    flex-direction: row;  
+    justify-content: space-between;
   }
 
   .collapse {
-    flex: 1; 
+    flex: 1;
+    border-radius: 10px;
   }
 }

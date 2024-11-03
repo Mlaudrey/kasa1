@@ -15,7 +15,7 @@
     .notfound-message {
       font-size: 1.5rem;
       color: #ff6060;
-      margin: 50px 20px;
+      margin: 90px 20px;
       font-weight: 400;
     }
   
@@ -30,7 +30,7 @@
     }
   
     @media screen and (max-width: 768px) {
-      margin: 20px auto;
+
 
       .notfound-title {
         font-size: 6rem; 
@@ -38,7 +38,6 @@
 
       .notfound-message {
         font-size: 1.2rem;
-        margin: 30px 10px; 
       }
 
       .notfound-link {
